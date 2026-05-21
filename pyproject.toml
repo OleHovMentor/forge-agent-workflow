@@ -1,0 +1,38 @@
+[project]
+name = "forge-agent-workflow"
+version = "0.1.0"
+description = "File-first workflow engine for supervised AI coding agents"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [
+  { name = "Oleg Posokhov" }
+]
+keywords = [
+  "ai-agents",
+  "claude-code",
+  "codex",
+  "developer-tools",
+  "context-engineering",
+  "llmops",
+  "workflow",
+  "safety"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Build Tools",
+  "Topic :: Software Development :: Quality Assurance"
+]
+
+[project.scripts]
+forge-validate-evidence = "forge_workflow.validate_evidence:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
